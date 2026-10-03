@@ -1,0 +1,55 @@
+:root {
+  --bg: #0a0a0a;
+  --panel: #141414;
+  --line: #2a2a2a;
+  --gold: #c9a84c;
+  --text: #d4c08a;
+  --muted: #a08040;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--gold); }
+
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+header { border-bottom: 1px solid var(--line); }
+header .wrap { display: flex; justify-content: space-between; align-items: center; padding-top: 18px; padding-bottom: 18px; }
+.brand { color: var(--gold); font-weight: 700; font-size: 1.15rem; text-decoration: none; letter-spacing: .02em; }
+nav a { margin-left: 18px; text-decoration: none; font-size: .95rem; }
+
+.hero { text-align: center; padding: 72px 0 56px; }
+.hero h1 { color: var(--gold); font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 12px; }
+.hero p { font-size: 1.15rem; max-width: 560px; margin: 0 auto 32px; }
+
+.play-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--gold); color: #0a0a0a;
+  padding: 14px 26px; border-radius: 10px;
+  font-weight: 700; text-decoration: none; font-size: 1.05rem;
+}
+.play-btn:hover { background: #ddbc5e; }
+.play-btn svg { width: 22px; height: 22px; }
+
+section { padding: 40px 0; border-top: 1px solid var(--line); }
+h2 { color: var(--gold); margin-top: 0; }
+
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; padding: 0; list-style: none; }
+.steps li { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+.steps strong { color: var(--gold); display: block; margin-bottom: 6px; }
+
+footer { border-top: 1px solid var(--line); padding: 28px 0; font-size: .85rem; color: var(--muted); text-align: center; }
+
+.policy { padding: 48px 0; }
+.policy h1 { color: var(--gold); margin-bottom: 4px; }
+.policy .updated { color: var(--muted); font-size: .9rem; margin-bottom: 32px; }
+.policy section { padding: 20px 0; border: 0; }
+.policy h2 { font-size: 1.25rem; }
