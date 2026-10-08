@@ -22,9 +22,15 @@ a { color: var(--gold); }
 .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
 
 header { border-bottom: 1px solid var(--line); }
-header .wrap { display: flex; justify-content: space-between; align-items: center; padding-top: 18px; padding-bottom: 18px; }
+header .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px; padding-top: 18px; padding-bottom: 18px; }
 .brand { color: var(--gold); font-weight: 700; font-size: 1.15rem; text-decoration: none; letter-spacing: .02em; }
-nav a { margin-left: 18px; text-decoration: none; font-size: .95rem; }
+nav { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+nav a { display: inline-block; padding: 6px 2px; text-decoration: none; font-size: .95rem; }
+
+@media (max-width: 480px) {
+  header .wrap { flex-direction: column; justify-content: center; }
+  nav { justify-content: center; }
+}
 
 .hero { text-align: center; padding: 72px 0 56px; }
 .hero h1 { color: var(--gold); font-size: clamp(2rem, 6vw, 3rem); margin: 0 0 12px; }
